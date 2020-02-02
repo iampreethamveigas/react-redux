@@ -1,0 +1,3 @@
+module.exports = {
+    INITIATE_APP_REQUESTS: 'INITIATE_APP_REQUESTS'
+}
