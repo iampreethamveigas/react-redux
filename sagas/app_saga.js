@@ -27,14 +27,13 @@ function accountWidgetInitalset() {
     return storage.store({ record: [], key: 'accounts_widget', override: true })
 
 }
+
 function* handleInitial() {
     try {
         const settInitalAppAccount = yield call(accountWidgetInitalset)
         yield put(({ type: REQUEST_ALL_ACCOUNTS }))
-
     } catch (error) {
         console.log(error, 'settInitalAppAccount')
-
         logMe(TAG, 'Error inside handleInitial ' + JSON.stringify(error))
     }
 }
